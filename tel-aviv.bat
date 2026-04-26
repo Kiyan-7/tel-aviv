@@ -1,12 +1,4 @@
 @echo off
-:: Set script to run on startup
-
-set "startup_folder=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
-if not exist "%startup_folder%\%~nx0" (
-    copy "%~f0" "%startup_folder%\"
-)
-
-
 setlocal enabledelayedexpansion
 
 :: --- CONFIGURATION ---
